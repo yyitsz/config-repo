@@ -1,11 +1,21 @@
-spring.jpa.database: "POSTGRESQL"
-spring.datasource.platform:  "postgres"
-spring.jpa.show-sql: "true"
-spring.database.driverClassName: "org.postgresql.Driver"
-spring.datasource.url: "jdbc:postgresql://PGSERVER:5432/eagle_eye_local"
-spring.datasource.username: "postgres"
-spring.datasource.password: "abc123"
-spring.datasource.testWhileIdle: "true"
-spring.datasource.validationQuery: "SELECT 1"
-spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
-signing.key: "345345fsdfsf5345"
+spring:
+  jpa:
+    database: "POSTGRESQL"
+    show-sql: "true"
+    properties:
+      hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+  database:
+    driverClassName: "org.postgresql.Driver"
+  datasource:
+    platform: "postgres"
+    url: "jdbc:postgresql://PGSERVER:5432/eagle_eye_local"
+    username: "postgres"
+    password: "abc123"
+    testWhileIdle: "true"
+    validationQuery: "SELECT 1"
+
+server:
+  port: 6010
+  
+signing:
+  key: "345345fsdfsf5345"
